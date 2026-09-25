@@ -2,6 +2,8 @@ import subprocess
 import logging
 import argparse
 
+SERVER_VERSION='1.1'
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
