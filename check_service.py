@@ -2,7 +2,7 @@ import subprocess
 import logging
 import argparse
 
-SERVER_VERSION='2.0branch-a'
+SERVER_VERSION='2.0'
 
 logging.basicConfig(
     level=logging.INFO,
