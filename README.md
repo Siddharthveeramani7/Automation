@@ -1,6 +1,6 @@
 # Automation
 
-A collection of Python + Linux automation scripts built while learning core concepts for infrastructure automation, monitoring, and operations — service health checks, log monitoring, and API health checks, each with proper error handling and logging.
+A collection of Python + Linux automation scripts built while learning core concepts for infrastructure automation, monitoring, and operations - service health checks, log monitoring, and API health checks, each with proper error handling and logging.
 
 ## Scripts
 
