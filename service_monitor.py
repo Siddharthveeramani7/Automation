@@ -2,7 +2,6 @@ import subprocess
 import logging
 import argparse
 
-SERVER_VERSION='2.0'
 
 logging.basicConfig(
     level=logging.INFO,
@@ -29,16 +28,17 @@ def restart_service(service_name):
     else:
         logging.error(f"Failed to restart {service_name}. Error: {result.stderr.strip()}")
 
-parser = argparse.ArgumentParser(description='Check and restart a service if it is not running.')
-parser.add_argument('service_name', type=str, help='Name of the service to check')
-args = parser.parse_args()
-service = args.service_name
+def main():
+    parser = argparse.ArgumentParser(description='Check and restart a service if it is not running.')
+    parser.add_argument('service_name', type=str, help='Name of the service to check')
+    args = parser.parse_args()
+    service = args.service_name
 
-if is_service_active(service):
-    logging.info(f"{service} is running fine.")
-else:
-    logging.warning(f"{service} is NOT running — needs attention.")
-    restart_service(service)
+    if is_service_active(service):
+        logging.info(f"{service} is running fine.")
+    else:
+        logging.warning(f"{service} is NOT running — needs attention.")
+        restart_service(service)
 
-
-    
+if __name__ == "__main__":
+    main()
